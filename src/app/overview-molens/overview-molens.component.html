@@ -1,0 +1,93 @@
+<p-toast position="top-left" key="tl" [breakpoints]="{'650px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+<p-scrollTop></p-scrollTop>
+<div class="search-bar">
+  <input
+    class="search-field"
+    type="text"
+    pInputText
+    [(ngModel)]="searchFieldText"
+  />
+  <p-button (click)="onDoSearch()" class="search-button">Zoeken</p-button>
+  <p-button (click)="onDoClear()" class="search-button">Reset</p-button>
+</div>
+<div
+  infinite-scroll
+  [alwaysCallback]="true"
+  [infiniteScrollDistance]="distance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScroll()"
+>
+  <ngx-masonry [updateLayout]="false">
+    <div
+      ngxMasonryItem
+      class="masonry-item"
+      *ngFor="let molen of molens"
+      class="molen-card"
+      #editedCard
+    >
+      <p-card [header]="molen.naam" [subheader]="molen.plaats">
+        <img
+          masonryLazy
+          loading="lazy"
+          [src]="getMolenUrl(molen)"
+          [width]="molen.fotoWidth"
+          [height]="molen.fotoHeight"
+        />
+         <div *ngIf="!molen.isBeingModified" class="content">
+          <table style="width: 100%">
+            <colgroup>
+              <col span="1" class="label" />
+              <col span="1" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>Type:</td>
+                <td>{{ molen.type }}</td>
+              </tr>
+              <tr>
+                <td>Kenmerken:</td>
+                <td>{{ molen.kenmerken }}</td>
+              </tr>
+              <tr>
+                <td>Functie:</td>
+                <td>{{ molen.functie }}</td>
+              </tr>
+              <tr>
+                <td>Bouwjaar:</td>
+                <td>{{ molen.bouwjaar }}</td>
+              </tr>
+              <tr>
+                <td>Adres:</td>
+                <td>{{ molen.adres }}</td>
+              </tr>
+              <tr>
+                <td>Molenaar:</td>
+                <td>{{ molen.molenaar }}</td>
+              </tr>
+              <tr>
+                <td>Eigenaar:</td>
+                <td>{{ molen.eigenaar }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <app-edit-molen *ngIf="molen.isBeingModified" [requestId]="requestId" [molen]="molen"></app-edit-molen>
+        <ng-template pTemplate="footer">
+          <div style="display: flex">
+            <a *ngIf="!molen.isBeingModified" [href]="molen.website">Website</a>
+            <div style="flex: 1"></div>
+            <div *ngIf="!molen.isBeingModified && loggedIn">
+              <a [routerLink]="" (click)="onEdit(molen)">Aanpassen</a>
+            </div>
+            <div *ngIf="molen.isBeingModified">
+              <a [routerLink]="" (click)="onSave(molen)">Opslaan</a>&nbsp;&nbsp;
+              <a [routerLink]="" (click)="onCancel(molen)">Annuleren</a
+              >&nbsp;&nbsp;
+              <a [routerLink]="" (click)="onDelete(molen)">Verwijderen</a>
+            </div>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </ngx-masonry>
+</div>

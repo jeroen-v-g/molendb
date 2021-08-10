@@ -1,0 +1,80 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+node_modules
+= ~/db/data/index/default/nl.molens.model.Molen/_2_Lucene50_0.doc
+= ~/db/data/index/default/nl.molens.model.Molen/_2_Lucene50_0.pos
+= ~/db/data/index/default/nl.molens.model.Molen/_2_Lucene50_0.tim
+= ~/db/data/index/default/nl.molens.model.Molen/_2_Lucene50_0.tip
+= ~/db/data/index/default/nl.molens.model.Molen/_2.fdt
+= ~/db/data/index/default/nl.molens.model.Molen/_2.fdx
+= ~/db/data/index/default/nl.molens.model.Molen/_2.fnm
+= ~/db/data/index/default/nl.molens.model.Molen/_2.nvd
+= ~/db/data/index/default/nl.molens.model.Molen/_2.nvm
+= ~/db/data/index/default/nl.molens.model.Molen/_2.si
+= ~/db/data/index/default/nl.molens.model.Molen/segments_2
+= ~/db/data/index/default/nl.molens.model.Molen/write.lock
+= ./data/lucene/nl.molens.model.Molen/_j_Lucene50_0.doc
+= ./data/lucene/nl.molens.model.Molen/_j_Lucene50_0.pos
+= ./data/lucene/nl.molens.model.Molen/_j_Lucene50_0.tim
+= ./data/lucene/nl.molens.model.Molen/_j_Lucene50_0.tip
+= ./data/lucene/nl.molens.model.Molen/_j.fdt
+= ./data/lucene/nl.molens.model.Molen/_j.fdx
+= ./data/lucene/nl.molens.model.Molen/_j.fnm
+= ./data/lucene/nl.molens.model.Molen/_j.nvd
+= ./data/lucene/nl.molens.model.Molen/_j.nvm
+= ./data/lucene/nl.molens.model.Molen/_j.si
+= ./data/lucene/nl.molens.model.Molen/segments_c
+= ./data/lucene/nl.molens.model.Molen/write.lock
+static/3rdpartylicenses.txt
+static/color.6441e63a57ccc5105bad.png
+static/favicon.ico
+static/hue.f8505bd4d6f3e3aa435b.png
+static/index.html
+static/main.91e35b694aa6abf0334f.js
+static/main.91e35b694aa6abf0334f.js.map
+static/polyfills.a29114a41ee32c1dd9a8.js
+static/polyfills.a29114a41ee32c1dd9a8.js.map
+static/primeicons.3a0d4a58da62cf7c55bb.ttf
+static/primeicons.c55d94a248721abbd220.svg
+static/primeicons.dfbfef2de4bfb34e9722.eot
+static/primeicons.e61f3495a7ecd3d571a4.woff
+static/runtime.e24966ca539ef5a4797f.js
+static/runtime.e24966ca539ef5a4797f.js.map
+static/styles.a9ff6da59f9f8685965e.css
+static/styles.a9ff6da59f9f8685965e.css.map
+static/src/main/resources/templates/index.html

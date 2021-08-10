@@ -1,0 +1,81 @@
+@keyframes expand {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    /*background: #5470B0;*/
+  }
+}
+
+.content .label
+{
+  display: inline-block;
+  width: 100px;
+}
+
+.molen-card {
+  width: 400px;
+  margin: 2em;
+}
+
+.molen-card .content{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.molen-card img{
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.molen-card .molen-animation{
+animation: expand .5s ease-in-out;
+}
+
+.search-bar{
+  margin-left: 23px;
+}
+
+.search-bar .search-field{
+  margin-left: 0.5em;
+}
+.search-bar .search-button{
+  margin-left: 0.5em;
+}
+
+@media only screen and (max-width: 650px) {
+  .molen-card {
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .search-bar{
+    margin-left: 5px;
+  }
+
+  .molen-card img{
+    max-width: 265px;
+  }
+
+  .search-bar .search-field{
+    width: 80px;
+  }
+
+  .search-bar .search-button{
+    width: 80px;
+  }
+
+  .content input
+  {
+    max-width: 165px;
+  }
+  .content .value
+  {
+    max-width: 165px;
+  }
+
+}

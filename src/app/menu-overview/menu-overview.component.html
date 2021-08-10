@@ -1,0 +1,9 @@
+<button mat-button [matMenuTriggerFor]="menu">Molens</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">Overzicht</button>
+  <button mat-menu-item *ngIf="loggedIn" routerLink="/addMolen">Toevoegen</button>
+</mat-menu>
+<button *ngIf="!loggedIn" routerLink="/login" mat-button>Login</button>
+<button *ngIf="loggedIn" mat-button routerLink="/login">LogOut</button>
+
+

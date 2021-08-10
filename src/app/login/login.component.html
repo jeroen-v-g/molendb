@@ -1,0 +1,9 @@
+<p>{{title}}</p>
+<p>
+<label>Gebruikersnaam:</label><input type="text" pInputText [(ngModel)]="username" />
+</p>
+<p>
+<label>Wachtwoord:</label><p-password type="password" [feedback]="false" [toggleMask]="true" [(ngModel)]="password"></p-password>
+</p>
+<button mat-button (click)="onLoginClick()">Login</button>
+<button mat-button (click)="onLogoutClick()">Logout</button>

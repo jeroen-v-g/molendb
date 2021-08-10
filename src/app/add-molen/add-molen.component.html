@@ -1,0 +1,6 @@
+<p-toast position="top-left" key="tl" [breakpoints]="{'650px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+<div class="frame">
+  <h1>Molen toevoegen</h1>
+  <app-edit-molen [requestId]="requestId" [molen]="molen"></app-edit-molen>
+  <p-button (click)="onAddMolen()" styleClass="search-button">Voeg molen toe</p-button>
+</div>

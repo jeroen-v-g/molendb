@@ -1,0 +1,81 @@
+<form [formGroup]="molenForm">
+  <table class="content">
+    <tr>
+      <th class="label"></th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Naam:</td>
+      <td><input type="text" aria-describedby="name-help" formControlName="naam" pInputText required  />
+        <small *ngIf="naam?.errors" id="name-help" class="p-error">Naam is verplicht.</small>
+      </td>
+    </tr>
+    <tr>
+      <td>Plaats:</td>
+      <td><input type="text" pInputText formControlName="plaats" required style="width:9em;" />
+        <small *ngIf="plaats?.errors" id="name-help" class="p-error">Plaats is verplicht.</small>
+      </td>
+    </tr>
+    <tr>
+      <td>Type:</td>
+      <td><input type="text" pInputText formControlName="type" required style="width:6em;"/>
+        <small *ngIf="type?.errors" id="name-help" class="p-error">Type is verplicht.</small></td>
+    </tr>
+    <tr>
+      <td>Kenmerken:</td>
+      <td><input type="text" pInputText formControlName="kenmerken" required />
+        <small *ngIf="kenmerken?.errors" id="name-help" class="p-error">Kenmerken is verplicht.</small></td>
+    </tr>
+    <tr>
+      <td>Functie:</td>
+      <td><input type="text" pInputText style="width:9em;" formControlName="functie"/></td>
+    </tr>
+    <tr>
+      <td class="with-label">Bouwjaar: <small>(Voer een getal in)</small></td>
+      <td>
+        <p-inputNumber
+          [useGrouping]="false"
+          inputStyleClass="bouwjaar"
+          formControlName="bouwjaar"
+        ></p-inputNumber>
+      </td>
+    </tr>
+    <tr>
+      <td>Adres:</td>
+      <td><input type="text" pInputText formControlName="adres"/></td>
+    </tr>
+    <tr>
+      <td>Molenaar:</td>
+      <td><input type="text" pInputText formControlName="molenaar" /></td>
+    </tr>
+    <tr>
+      <td>Eigenaar:</td>
+      <td><input type="text" pInputText formControlName="eigenaar" /></td>
+    </tr>
+    <tr>
+      <td>Website:</td>
+      <td><input type="URL" pInputText formControlName="website"/>
+        <small *ngIf="website?.errors" id="name-help" class="p-error">Website moet URL zijn</small></td>
+    </tr>
+    <tr>
+      <td><p></p></td>
+    </tr>
+    <tr>
+      <td>Foto:</td>
+      <td>
+        <p-fileUpload
+          #uploader
+          mode="basic"
+          name="molenFoto[]"
+          accept="image/*"
+          [maxFileSize]="3145728"
+          [customUpload]="true"
+          [auto]="true"
+          (uploadHandler)="onUpload($event, uploader)"
+          chooseLabel="Bladeren"
+        >
+        </p-fileUpload>
+      </td>
+    </tr>
+  </table>
+</form>
